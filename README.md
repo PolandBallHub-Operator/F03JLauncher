@@ -1,5 +1,5 @@
 # F-03J Launcher3（user app）
-
+F-03Jという端末はLauncher3系(Nova launcher/launcher3)が動かず、NO Launcherなど非Launcher3系なら動くと。謎だなと思ったため、まずはNovaを入れてlogcatしまくる。そうしてそのクラッシュ原因を参考にLauncher3にパッチ。
 AOSP Launcher3 [`android-5.1.1_r4`](https://android.googlesource.com/platform/packages/apps/Launcher3/+/refs/tags/android-5.1.1_r4) をF-03J向けに移植したランチャーです。実機ログに基づき、初回データベース生成時の`AppWidgetHost.deleteHost()`によるnull binderクラッシュを回避し、通常のユーザーアプリとしてビルドします。
 
 ## 2つのビルド
