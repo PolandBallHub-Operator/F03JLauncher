@@ -9,9 +9,7 @@ AOSP Launcher3 [`android-5.1.1_r4`](https://android.googlesource.com/platform/pa
 | APK | 内容 |
 |---|---|
 | `F03J-Launcher3-noqsb.apk` | QSBバーを表示せず、QSB用に予約されていた画面上部の余白をWorkspaceに戻します。ホームの一番上の行にもアプリを配置できます。 |
-| `F03J-Launcher3-qsb.apk` | 白い角丸検索バーにロゴとマイクを表示します。バーをタップするとAOSP QSBと同じ`SearchManager.INTENT_ACTION_GLOBAL_SEARCH`をGoogleアプリ（`com.google.android.googlequicksearchbox`）宛てに送ります。Googleアプリが見つからない場合は端末の既定`ACTION_WEB_SEARCH`ハンドラーを試します。検索アプリ本体は含めません。 |
-
-どちらのAPKにも添付された端末イラストをランチャーアイコンとして使用しています。縦横比を保ったまま透明余白を入れて、各mipmapサイズへ書き出しています。
+| `F03J-Launcher3-qsb.apk` | 白い角丸検索バーにロゴとマイクを表示します。バーをタップするとAOSP QSBと同じ`SearchManager.INTENT_ACTION_GLOBAL_SEARCH`をGoogleアプリ（`com.google.android.googlequicksearchbox`）宛てに送ります。Googleアプリが見つからない場合は端末の既定`ACTION_WEB_SEARCH`ハンドラーを試します。 |
 
 ## ビルド
 
