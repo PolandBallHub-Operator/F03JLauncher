@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.android.launcher3'
+    compileSdkVersion 33
+    buildToolsVersion '33.0.2'
+
+    defaultConfig {
+        applicationId 'com.f03j.launcher'
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName '1.0-f03j'
+    }
+
+    flavorDimensions 'search'
+    productFlavors {
+        noqsb {
+            dimension 'search'
+            versionNameSuffix '-noqsb'
+            buildConfigField 'boolean', 'QSB_ENABLED', 'false'
+            buildConfigField 'boolean', 'EMBEDDED_QSB', 'false'
+        }
+        qsb {
+            dimension 'search'
+            versionNameSuffix '-qsb'
+            buildConfigField 'boolean', 'QSB_ENABLED', 'true'
+            buildConfigField 'boolean', 'EMBEDDED_QSB', 'true'
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile '../AndroidManifest.xml'
+            java.srcDirs = ['../src', '../WallpaperPicker/src']
+            java.exclude '**/LauncherBackupHelper.java'
+            java.exclude '**/LauncherBackupAgentHelper.java'
+            res.srcDirs = ['../res', '../WallpaperPicker/res']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.collection:collection:1.2.0'
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="f03j_google_search_hint">Googleで検索</string>
+    <string name="f03j_google_search_unavailable">検索アプリが見つかりません</string>
+</resources>

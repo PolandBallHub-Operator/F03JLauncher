@@ -1,0 +1,9 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+rootProject.name = 'F03JLauncher3'
+include ':app'
